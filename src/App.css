@@ -1,0 +1,284 @@
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: black;
+  margin: 0;
+  color: #333;
+}
+
+
+.app-container {
+  display: flex;
+  min-height: 50vh;
+}
+
+
+.products-section {
+  width: 65%;
+  padding: 40px;
+  background-color: #555;
+  box-sizing: border-box;
+  transform-style: preserve-3d;
+  transition: tranform 0.3s ease, box-shadow 0.3s ease;
+
+}
+
+
+
+
+
+.store-title {
+  font-size: 2.1rem;
+  color: #fff;
+  margin-bottom: 30px;
+  border-bottom: 3px solid #007bff;
+  padding-bottom: 10px;
+  display: inline-block;
+}
+
+/* Grid for displaying shoes */
+.shoes-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 2fr));
+  gap: 30px;
+}
+
+/* Individual Shoe Card */
+.shoe-card {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+shoe-card.visible {
+  opacity: 1; 
+  transform: translateY(2);
+}
+
+.shoe-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+  
+
+}
+.shoe-card:hover {
+  transform: perspective(500px) translateZ(20px) rotateX(10deg); 
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.shoe-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+.shoe-card:hover .shoe-image {
+  transform: scale(1.05); 
+}
+
+.shoe-name {
+  font-size: 1.2rem;
+  margin: 15px 10px;
+}
+
+.shoe-price {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #007bff;
+  margin-bottom: 15px;
+}
+
+
+.add-btn {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  width: 100%;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.add-btn:hover {
+  background-color: #405367;
+}
+
+/* Cart Section (Right Side) */
+.cart-section {
+  width: 50%;
+  padding: 40px;
+  background-color: #555;
+  box-sizing: border-box;
+  
+}
+
+.cart-title {
+  font-size: 2rem;
+  color: white;
+  margin-bottom: 30px;
+}
+
+.cart-empty-message {
+  color: #bfc8cf;
+  font-size: 1.1rem;
+}
+
+/* Individual Item in the Cart */
+.cart-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #fff;
+  padding: 14px;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+.cart-item:hover{
+border: 5px solid #333;
+box-shadow: #555 0 0 10px rgba(0, 0, 0, 0.12);
+}
+
+.cart-item-name {
+  font-weight: bold;
+}
+
+.cart-item-price {
+  color: #101111;
+}
+
+
+.remove-btn {
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  
+  
+  font-size: 1.0rem;
+  font-weight: bold;
+  cursor: pointer;
+ 
+  transition: background-color 0.3s ease;
+}
+
+.remove-btn:hover {
+  background-color: #c82333;
+}
+
+
+.cart-total {
+  margin-top: 30px;
+  padding-top: 20px;
+  border-top: 2px solid #ced4da;
+  text-align: right;
+  font-size: 1.5rem;
+  color: #fff;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; 
+  background-color: #333; 
+  padding: 10px 40px;
+  color: white;
+}
+
+.navbar-brand a {
+  color: white; 
+  text-decoration: none; 
+  font-size: 1.5rem; 
+  font-weight: bold;
+}
+
+.navbar-links {
+  list-style: none; 
+  display: flex; 
+  margin: 0; 
+  padding: 0; 
+  gap: 20px; 
+}
+
+.quantity-controls {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 10px 0;
+}
+
+.qty-btn {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 6px 12px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.qty-btn:hover {
+  background-color: #22d25d;
+  font-size: 20px;
+ 
+  }
+  .qty-btn1 {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 6px 12px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 4px;
+  }
+  .qty-btn1:hover{
+    background-color: red;
+  }
+
+.cart-item-quantity {
+  min-width: 20px;
+  text-align: center;
+}
+.cart-item-image{
+width: 50px;
+height: 50px;
+}
+ 
+
+.navbar-links a {
+  color: white; 
+  text-decoration: none; 
+  font-size: 1rem; 
+  transition: color 0.3s ease;  
+}
+
+.navbar-links a:hover {
+  color: #007bff; 
+}
+
+@media (max-width : 992px){
+  .app-container {
+    flex-direction: column;
+  }
+  .products-section, .cart-section{
+    width:100%;
+  }
+  .cart-section{
+    border-top: 4px solid #333
+  }
+  @media (max-width:768px){
+    .products-section, .cart-section{
+      padding:20px;
+    }
+  }
+  .store-title{
+    font-size: 1.75rem;
+  }
+  .navbar {
+    padding: 10px 20px;
+    flex-direction: column;
+    gap:10px;
+  }
+}
