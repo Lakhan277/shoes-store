@@ -76,9 +76,11 @@ function App(){
         </div>
         
         <div className="cart-section">
-      <h2 className="cart-title"> Your Cart is Empty</h2>
+      <h2 className="cart-title"> Your Item is Here</h2>
       {cart.length === 0 ?(
-        <p className="cart-empty-message"> Waiting for shoes!</p>
+        
+        <p className="cart-empty-message"> Your Cart is empty please click add to cart button</p>
+        
       ) : (
         <>
         {cart.map(item =>(
